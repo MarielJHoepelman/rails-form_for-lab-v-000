@@ -1,13 +1,12 @@
 class SchoolClassesController < ApplicationController
-
+  before_action :find_student, only: [:show, :edit, :update]
+  
   def new
     @school_class = SchoolClass.new
   end
 
   def create
-    # @school_class = SchoolClass.create(title: params[:title], room_number: params[:room_number])
     @school_class = SchoolClass.create(params.require(:school_class).permit(:title, :room_number))
-
     redirect_to school_class_path(@school_class)
   end
 
