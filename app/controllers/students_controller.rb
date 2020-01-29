@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create(params.require(:student).permit(:first_name, :last_name))
+    @student = Student.create(post_params)
     redirect_to student_path(@student)
   end
 
@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-    @student.update(first_name: params[:student][:first_name], last_name: params[:student][:last_name])
+    @student.update(post_params)
     redirect_to student_path(@student)
   end
 
@@ -29,6 +29,7 @@ class StudentsController < ApplicationController
   end
 
   def post_params
-  end 
+    params.require(:student).permit(:first_name, :last_name)
+  end
 
 end
