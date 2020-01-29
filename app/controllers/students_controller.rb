@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action find_student, only: [:show, :edit, :update]
+  before_action :find_student, only: [:show, :edit, :update]
 
   def new
     @student = Student.new
