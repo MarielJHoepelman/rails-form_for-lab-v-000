@@ -233,3 +233,26 @@ Processing by StudentsController#show as HTML
 Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/students/new" for 108.29.35.155 at 2020-01-29 03:31:07 +0000
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 108.29.35.155 at 2020-01-29 03:31:12 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aUlBf+v2YFRlYHfNKmAfTS57nVi1Ae+XrLh01l2hfR295kvOz/UAWb5GLiqcu8l0r5lOIAqToW8eEjAy6hNNrQ==", "student"=>{"first_name"=>"Mariel", "last_name"=>"Hoepelman"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-29 03:31:12.803656"], ["updated_at", "2020-01-29 03:31:12.803656"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://192.241.157.192:35587/students/4
+Completed 302 Found in 12ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/students/4" for 108.29.35.155 at 2020-01-29 03:31:12 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
