@@ -25,4 +25,9 @@ class SchoolClassesController < ApplicationController
     redirect_to school_class_path(@school_class)
   end
 
+  private
+
+  def find_school_class
+    @school_class = SchoolClass.find(params[:id])
+  end 
 end
