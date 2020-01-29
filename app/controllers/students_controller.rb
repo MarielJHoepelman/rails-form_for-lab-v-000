@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class SchoolClassController < ApplicationController
 
   def new
   end
@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
-  end 
+  end
 
   def update
   end
