@@ -1,5 +1,5 @@
 class SchoolClassesController < ApplicationController
-  before_action :find_student, only: [:show, :edit, :update]
+  before_action :find_school_class, only: [:show, :edit, :update]
 
   def new
     @school_class = SchoolClass.new
