@@ -264,3 +264,10 @@ Processing by StudentsController#show as HTML
   Parameters: {"id"=>"4"}
   [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (162952.4ms)
+Completed 500 Internal Server Error in 163027ms (ActiveRecord: 0.1ms)
+
+
+  
+SystemExit (exit):
+  
