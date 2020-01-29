@@ -3,7 +3,7 @@ require 'rails_helper'
 
 describe 'form page' do
   it 'form renders with the new action' do
-    binding.pry
+    byebug
     visit new_school_class_path
     expect(page).to have_content("School Class Form")
   end
