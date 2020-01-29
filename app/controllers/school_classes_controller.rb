@@ -21,6 +21,9 @@ class SchoolClassesController < ApplicationController
   end
 
   def update
+    @school_class = Article.find(params[:id])
+    @school_class.update(title: params[:article][:title], description: params[:article][:description])
+    redirect_to article_path(@school_class)
   end
 
 end
