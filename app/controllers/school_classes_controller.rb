@@ -6,7 +6,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @school_class = SchoolClass.create(params.require(:school_class).permit(:title, :room_number))
+    @school_class = SchoolClass.create(post_params)
     redirect_to school_class_path(@school_class)
   end
 
@@ -18,7 +18,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def update
-    @school_class.update(title: params[:school_class][:title], room_number: params[:school_class][:room_number])
+    @school_class.update(post_params)
     redirect_to school_class_path(@school_class)
   end
 
